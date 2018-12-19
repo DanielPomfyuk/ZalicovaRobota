@@ -1,0 +1,9 @@
+<h1>Editing Ad</h1>
+<%= form_for @ad, url: ad_path(@ad.id) do |f| %>
+  <%= f.select :real_estate_type, Ad.real_estate_types.keys%></br>
+  <%= f.text_field :square %></br>
+  <%= f.text_field :adress %></br>
+  <%= f.text_field :rooms %></br>
+  <%= f.text_field :rent_limit_days %></br>
+  <%= f.submit "Update" %>
+<%end %>
