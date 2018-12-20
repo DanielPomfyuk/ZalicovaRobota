@@ -1,10 +1,24 @@
-# ZalicovaRobota
-Сайт являє собою платформу для оренди нерухомості на нетривалий період (типу Airbnb)
+# README
 
-Авторизований юзер може:
--Викладати/ видаляти оголошення
--Оглядово проходитись по всім оголошенням
--Переходити на окремі оголошення та продивлятись їх більш детально
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-Неавторизований юзер може:
--Оглядово проходитись по всім оголошенням
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...

@@ -1,5 +1,10 @@
 <h1>Welcome.You can publish your ad here.</h1>
 <%= form_for @ad, url: ads_path do |f| %>
+  <%if @ad.errors.any? %>
+    <%@ad.errors.full_messages.each do |msg| %>
+      <div class="alert alert-danger"><%= msg %></div>
+      <%end %>
+  <%end %>
   <p>
     <%= f.label :real_estate_type %><br>
     <%= f.select :real_estate_type, Ad.real_estate_types.keys%>

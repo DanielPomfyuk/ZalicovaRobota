@@ -4,7 +4,7 @@ class AdsController < ApplicationController
   # GET /ads
   # GET /ads.json
   def index
-    @ads = Ad.all
+   redirect_to root_path
   end
 
   # GET /ads/1
@@ -33,8 +33,8 @@ class AdsController < ApplicationController
         format.json { render :show, status: :created, location: @ad }
       else
         format.html {
-          flash[:notice] = @ad.errors.messages
-          render(:new)
+          #flash[:notice] = @ad.errors.messages
+          render 'new'
         }
         format.json { render json: @ad.errors, status: :unprocessable_entity }
       end
