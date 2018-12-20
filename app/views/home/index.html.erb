@@ -2,6 +2,9 @@
   <p>No ads at the moment</p>
 <% else %>
   <% @ads.each do |ad| %>
+    <%unless ad.pictures.empty? %>
+      <%= image_tag ad.pictures.first.image.url(:thumb) %><br/>
+    <%end %>
     <p>
       <b><%=  ad.real_estate_type%></b> <br />
       <b> in <%= ad.adress %></b><br />

@@ -24,9 +24,12 @@ class AdsController < ApplicationController
   # POST /ads
   # POST /ads.json
   def create
-    @ad = Ad.new(ad_params)
+    @ad = Ad.new(ad_params.except(:image))
     @ad.user = current_user
-
+    picture = Picture.new
+    picture.ad = @ad
+    picture.image = params[:ad][:image]
+    picture.save
     respond_to do |format|
       if @ad.save
         format.html { redirect_to ad_path(@ad.id), notice: 'Ad was successfully created.' }
@@ -44,6 +47,7 @@ class AdsController < ApplicationController
   # PATCH/PUT /ads/1
   # PATCH/PUT /ads/1.json
   def update
+
     respond_to do |format|
       if @ad.update(ad_params)
         format.html { redirect_to @ad }
@@ -72,6 +76,6 @@ class AdsController < ApplicationController
     end
 
     def ad_params
-      params.require(:ad).permit( :real_estate_type, :square , :rooms , :adress ,:second_adress ,:price_per_day , :rent_limit_days)
+      params.require(:ad).permit( :real_estate_type, :image, :square , :rooms , :adress ,:second_adress ,:price_per_day , :rent_limit_days)
     end
 end

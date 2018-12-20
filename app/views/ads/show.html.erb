@@ -1,4 +1,7 @@
 <p id="notice"><%= notice %></p>
+<%unless @ad.pictures.empty? %>
+  <%= image_tag @ad.pictures.first.image.url(:medium) %><br/>
+<%end %>
 <b><%=  @ad.real_estate_type%></b> <br />
 <b> <%= @ad.adress %> , <%= @ad.second_adress %></b><br />
 <b><%= @ad.square %></b> square meters <br />
