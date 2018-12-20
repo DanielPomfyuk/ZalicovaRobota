@@ -1,0 +1,12 @@
+<h1>Editing Your Profile</h1>
+<%= form_for @profile, url: profile_path(@profile.id) do |f| %>
+  <%if @profile.errors.any? %>
+    <%@profile.errors.full_messages.each do |msg| %>
+      <div class="alert alert-danger"><%= msg %></div>
+    <%end %>
+  <%end %>
+ First name <%= f.text_field :firstname %></br>
+ Second name <%= f.text_field :lastname %></br>
+  Phone number <%= f.text_field :phone_number %></br>
+  <%= f.submit "Update" %>
+<%end %>

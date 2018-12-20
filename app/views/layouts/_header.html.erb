@@ -5,6 +5,7 @@
     <span class="p-2 text-dark" ><%=link_to "Make an ad",new_ad_path%>  </span>
   </nav>
   <% if user_signed_in? %>
+    <span class="p-2 text-dark" > <%= link_to 'Edit Profile', edit_profile_path(current_user) %></span>
     <span class="btn btn-outline-primary" ><%=link_to "Log out" , destroy_user_session_path , method: :delete %></span>
 <% else %>
   <span class="btn btn-outline-primary" ><%=link_to "Log in" , new_user_session_path %></span>
