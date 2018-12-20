@@ -10,12 +10,16 @@
     <%= f.select :real_estate_type, Ad.real_estate_types.keys%>
   </p>
   <p>
-    <%= f.label :square %><br>
-    <%= f.text_field :square %>
+    <%= f.label :first_adress %><br>
+    <%= f.text_field :adress %>
   </p>
   <p>
-    <%= f.label :adress %><br>
-    <%= f.text_field :adress %>
+    <%= f.label :second_adress %><br>
+    <%= f.text_field :second_adress %>
+  </p>
+  <p>
+    <%= f.label :square %><br>
+    <%= f.text_field :square %>
   </p>
   <p>
     <%= f.label :rooms %><br>
@@ -24,6 +28,10 @@
   <p>
     <%= f.label :rent_limit_days %><br>
     <%= f.text_field :rent_limit_days %>
+  </p>
+  <p>
+    <%= f.label :price_per_day %><br>
+    <%= f.text_field :price_per_day %>
   </p>
   <p>
     <%= f.submit "Create ad" %><br>

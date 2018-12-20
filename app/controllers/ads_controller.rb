@@ -46,10 +46,10 @@ class AdsController < ApplicationController
   def update
     respond_to do |format|
       if @ad.update(ad_params)
-        format.html { redirect_to @ad, notice: 'Ad was successfully updated.' }
+        format.html { redirect_to @ad }
         format.json { render :show, status: :ok, location: @ad }
       else
-        format.html { render :edit }
+        format.html { render 'edit' }
         format.json { render json: @ad.errors, status: :unprocessable_entity }
       end
     end
@@ -72,6 +72,6 @@ class AdsController < ApplicationController
     end
 
     def ad_params
-      params.require(:ad).permit( :real_estate_type, :square , :rooms , :adress , :rent_limit_days)
+      params.require(:ad).permit( :real_estate_type, :square , :rooms , :adress ,:second_adress ,:price_per_day , :rent_limit_days)
     end
 end

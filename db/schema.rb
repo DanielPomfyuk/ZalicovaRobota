@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_18_201442) do
+ActiveRecord::Schema.define(version: 2018_12_20_174526) do
 
   create_table "ads", force: :cascade do |t|
     t.integer "real_estate_type", default: 0
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 2018_12_18_201442) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.float "price_per_day"
+    t.string "second_adress"
     t.index ["user_id"], name: "index_ads_on_user_id"
   end
 

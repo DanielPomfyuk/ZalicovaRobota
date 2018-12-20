@@ -1,9 +1,16 @@
 <h1>Editing Ad</h1>
 <%= form_for @ad, url: ad_path(@ad.id) do |f| %>
+  <%if @ad.errors.any? %>
+    <%@ad.errors.full_messages.each do |msg| %>
+      <div class="alert alert-danger"><%= msg %></div>
+    <%end %>
+  <%end %>
   <%= f.select :real_estate_type, Ad.real_estate_types.keys%></br>
   <%= f.text_field :square %></br>
   <%= f.text_field :adress %></br>
+  <%= f.text_field :second_adress %></br>
   <%= f.text_field :rooms %></br>
   <%= f.text_field :rent_limit_days %></br>
+  <%= f.text_field :price_per_day %></br>
   <%= f.submit "Update" %>
 <%end %>

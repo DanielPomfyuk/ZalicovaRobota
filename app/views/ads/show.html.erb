@@ -1,11 +1,13 @@
 <p id="notice"><%= notice %></p>
 <b><%=  @ad.real_estate_type%></b> <br />
-<b> in <%= @ad.adress %></b><br />
+<b> <%= @ad.adress %> , <%= @ad.second_adress %></b><br />
 <b><%= @ad.square %></b> square meters <br />
 <b><%= @ad.rooms %></b> rooms <br />
 <b>for <%= @ad.rent_limit_days %> </b> days <br />
+<b><%= @ad.price_per_day %> </b> $/day <br />
   <%if @ad.user == current_user %>
   <%= link_to 'Edit', edit_ad_path(@ad) %> |
-  <%= link_to "Delete", ad_path(@ad.id), method: :delete %><br />
+  <%= link_to "Delete", ad_path(@ad.id), method: :delete %>
+<br />
 <%end %>
   <%= link_to 'Back', root_path %>

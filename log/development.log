@@ -6313,3 +6313,908 @@ Processing by AdsController#new as HTML
 Completed 200 OK in 101ms (Views: 95.0ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-12-20 19:13:38 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mAd Load (8.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/home/index.html.erb:1
+  Rendered home/index.html.erb within layouts/application (46.4ms)
+  Rendered layouts/_header.html.erb (12.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 1521ms (Views: 1476.7ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/ads/5" for 127.0.0.1 at 2018-12-20 19:13:48 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+Completed 401 Unauthorized in 33ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-20 19:13:48 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (14.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (66.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (1.5ms)
+Completed 200 OK in 228ms (Views: 172.5ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-12-20 19:13:56 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (19.6ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 122ms (Views: 117.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-20 19:14:02 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/home/index.html.erb:1
+  Rendered home/index.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_header.html.erb (5.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 88ms (Views: 84.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ads/5" for 127.0.0.1 at 2018-12-20 19:14:28 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-20 19:14:28 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (8.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (3.8ms)
+Completed 200 OK in 86ms (Views: 85.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-12-20 19:14:32 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (17.9ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 93ms (Views: 91.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-20 19:14:34 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 114ms (Views: 112.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-20 19:14:50 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jQknDE5YrdwnPrO7U/PP2KaFZNq9mgUWzLHtU3dJBIpw7CmpG2Vf6oW67z4tvJ4mGvaSv260cDCLAL+CkfK4Yw==", "user"=>{"email"=>"danya@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "danya@gmail.com"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (5.9ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", "2018-12-20 17:14:51.019215"], ["updated_at", "2018-12-20 17:14:51.020511"], ["id", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (9.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/ads/5
+Completed 302 Found in 337ms (ActiveRecord: 15.7ms)
+
+
+Started GET "/ads/5" for 127.0.0.1 at 2018-12-20 19:14:51 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/show.html.erb within layouts/application
+  Rendered ads/show.html.erb within layouts/application (26.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (8.5ms)
+Completed 200 OK in 113ms (Views: 108.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-20 19:15:00 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/home/index.html.erb:1
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:7
+  Rendered layouts/_header.html.erb (8.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 87ms (Views: 83.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ads/5" for 127.0.0.1 at 2018-12-20 19:15:10 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/show.html.erb within layouts/application
+  Rendered ads/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (8.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 105ms (Views: 95.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-20 19:15:16 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mAd Load (9.5ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/home/index.html.erb:1
+  Rendered home/index.html.erb within layouts/application (15.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:7
+  Rendered layouts/_header.html.erb (10.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 106ms (Views: 95.2ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/ads/8" for 127.0.0.1 at 2018-12-20 19:15:18 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/show.html.erb within layouts/application
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/ads/show.html.erb:7
+  Rendered ads/show.html.erb within layouts/application (25.0ms)
+  Rendered layouts/_header.html.erb (4.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 124ms (Views: 105.6ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/ads/8" for 127.0.0.1 at 2018-12-20 19:27:18 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/ads/show.html.erb:7
+  Rendered ads/show.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (3.9ms)
+Completed 200 OK in 147ms (Views: 130.4ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-20 19:27:21 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/home/index.html.erb:1
+  Rendered home/index.html.erb within layouts/application (9.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:7
+  Rendered layouts/_header.html.erb (9.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 147ms (Views: 140.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ads/5" for 127.0.0.1 at 2018-12-20 19:27:22 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/show.html.erb within layouts/application
+  Rendered ads/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 94ms (Views: 85.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/ads/5" for 127.0.0.1 at 2018-12-20 19:27:24 +0200
+Processing by AdsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0FgGSDPDSEl/wUVhnE7dnoCGOkZsHU3PhYdZAl7Gg9pwayI7TxcSkvItAIq+68IqkCqskqJSgtMUGnRDVzXdCQ==", "id"=>"5"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ads_controller.rb:61
+  [1m[36mAd Destroy (1.1ms)[0m  [1m[31mDELETE FROM "ads" WHERE "ads"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/ads_controller.rb:61
+  [1m[35m (19.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ads_controller.rb:61
+Redirected to http://localhost:3000/
+Completed 302 Found in 41ms (ActiveRecord: 21.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-20 19:27:24 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/home/index.html.erb:1
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:7
+  Rendered layouts/_header.html.erb (6.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 91ms (Views: 89.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-20 19:27:44 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/home/index.html.erb:1
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:7
+  Rendered layouts/_header.html.erb (9.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 88ms (Views: 87.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ads/8" for 127.0.0.1 at 2018-12-20 19:27:46 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/ads/show.html.erb:7
+  Rendered ads/show.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 107ms (Views: 102.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-20 19:27:49 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/home/index.html.erb:1
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:7
+  Rendered layouts/_header.html.erb (10.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 94ms (Views: 92.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ads/8" for 127.0.0.1 at 2018-12-20 19:28:10 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/ads/show.html.erb:7
+  Rendered ads/show.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 96ms (Views: 90.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-20 19:28:49 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/home/index.html.erb:1
+  Rendered home/index.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:7
+  Rendered layouts/_header.html.erb (11.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 104ms (Views: 101.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ads/8" for 127.0.0.1 at 2018-12-20 19:29:48 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/ads/show.html.erb:7
+  Rendered ads/show.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (4.3ms)
+Completed 200 OK in 112ms (Views: 99.0ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/ads/8" for 127.0.0.1 at 2018-12-20 19:29:50 +0200
+Processing by AdsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5hPn9yWJD4X5prr0onUVQfdVjWsv8EGSDYP01Xhlbw1GIMOEWV1VXnRK/x+A0Ar15/kbv+G/jo6cHtmUcZYx3g==", "id"=>"8"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ads_controller.rb:61
+  [1m[36mAd Destroy (1.1ms)[0m  [1m[31mDELETE FROM "ads" WHERE "ads"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/ads_controller.rb:61
+  [1m[35m (265.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ads_controller.rb:61
+Redirected to http://localhost:3000/
+Completed 302 Found in 309ms (ActiveRecord: 266.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-20 19:29:50 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/home/index.html.erb:1
+  Rendered home/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:7
+  Rendered layouts/_header.html.erb (10.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 127ms (Views: 125.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ads/9" for 127.0.0.1 at 2018-12-20 19:29:52 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/ads/show.html.erb:7
+  Rendered ads/show.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_header.html.erb (9.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 96ms (Views: 88.3ms | ActiveRecord: 4.5ms)
+
+
+Started DELETE "/ads/9" for 127.0.0.1 at 2018-12-20 19:29:53 +0200
+Processing by AdsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IyA34CrTpwSx5opgPOH5w2GZe+P5hOVUfU4KMOjz5N6DExOTVgf93zwKz4seROZ3cTXtNzfLKkjs0ydx4QC6DQ==", "id"=>"9"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ads_controller.rb:61
+  [1m[36mAd Destroy (1.6ms)[0m  [1m[31mDELETE FROM "ads" WHERE "ads"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/ads_controller.rb:61
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ads_controller.rb:61
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-20 19:29:53 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/home/index.html.erb:1
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (12.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:7
+  Rendered layouts/_header.html.erb (14.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 107ms (Views: 93.5ms | ActiveRecord: 12.3ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddingPriceToAds (20181220173135)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "ads" ADD "price_per_day" float[0m
+  ↳ db/migrate/20181220173135_adding_price_to_ads.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181220173135"]]
+  ↳ bin/rails:9
+  [1m[35m (16.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-12-20 19:40:10 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/home/index.html.erb:1
+  Rendered home/index.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:7
+  Rendered layouts/_header.html.erb (28.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 530ms (Views: 500.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/ads/new" for 127.0.0.1 at 2018-12-20 19:40:21 +0200
+Processing by AdsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/new.html.erb within layouts/application
+  Rendered ads/new.html.erb within layouts/application (84.9ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 169ms (Views: 133.0ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddingSecondAdressToAds (20181220174526)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "ads" ADD "second_adress" varchar[0m
+  ↳ db/migrate/20181220174526_adding_second_adress_to_ads.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181220174526"]]
+  ↳ bin/rails:9
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/ads/new" for 127.0.0.1 at 2018-12-20 19:51:40 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by AdsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/new.html.erb within layouts/application
+  Rendered ads/new.html.erb within layouts/application (19.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 613ms (Views: 514.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/ads/new" for 127.0.0.1 at 2018-12-20 19:52:33 +0200
+Processing by AdsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/new.html.erb within layouts/application
+  Rendered ads/new.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 79ms (Views: 76.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ads/new" for 127.0.0.1 at 2018-12-20 19:53:02 +0200
+Processing by AdsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/new.html.erb within layouts/application
+  Rendered ads/new.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_header.html.erb (3.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 129ms (Views: 122.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/ads" for 127.0.0.1 at 2018-12-20 19:53:59 +0200
+Processing by AdsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amxnHHoY5RhuJT+zyNgOGzy89fpcbVX83v05wkB3m1/KX0NvBsy/w+PJeljqfRGvLBBjLpIimuBPYBSDSYTFjA==", "ad"=>{"real_estate_type"=>"house", "adress"=>"London,UK", "second_adress"=>"Liverpool street 17", "square"=>"1234", "rooms"=>"9", "rent_limit_days"=>"31", "price_per_day"=>"100"}, "commit"=>"Create ad"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :second_adress, :price_per_day
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ads_controller.rb:31
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ads_controller.rb:31
+  Rendering ads/new.html.erb within layouts/application
+  Rendered ads/new.html.erb within layouts/application (9.8ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 108ms (Views: 74.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/ads" for 127.0.0.1 at 2018-12-20 19:54:11 +0200
+Processing by AdsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LkbVFtimxUfuyWI1u8dDvhxGF2AXB5u/uYI/o71V4MiOdfFlpHKfnGMlJ96ZYlwKDOqBtNlIVKMoHxLitKa+Gw==", "ad"=>{"real_estate_type"=>"house", "adress"=>"London,UK", "second_adress"=>"", "square"=>"1234", "rooms"=>"9", "rent_limit_days"=>"31", "price_per_day"=>"100"}, "commit"=>"Create ad"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :second_adress, :price_per_day
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ads_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ads_controller.rb:31
+  Rendering ads/new.html.erb within layouts/application
+  Rendered ads/new.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (8.0ms)
+Completed 200 OK in 115ms (Views: 97.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/ads" for 127.0.0.1 at 2018-12-20 19:55:38 +0200
+Processing by AdsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YRYTo1Jy88Rrf0VzGj6XERg5S+uIhITgBXov90Aj9IfBJTfQLqapH+aTAJg4m4ilCJXdP0bLS/yU5wK2SdCqVA==", "ad"=>{"real_estate_type"=>"house", "adress"=>"London,UK", "second_adress"=>"Liverpool street 17", "square"=>"1234", "rooms"=>"9", "rent_limit_days"=>"31", "price_per_day"=>"100"}, "commit"=>"Create ad"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :second_adress, :price_per_day
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ads_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ads_controller.rb:31
+  Rendering ads/new.html.erb within layouts/application
+  Rendered ads/new.html.erb within layouts/application (21.9ms)
+  Rendered layouts/_header.html.erb (5.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 233ms (Views: 104.2ms | ActiveRecord: 5.6ms)
+
+
+Started POST "/ads" for 127.0.0.1 at 2018-12-20 20:02:43 +0200
+Processing by AdsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KzXSS9jIY2f99RmqSHq9nfZYvaDs6hrc8AKJLZP+2tuLBvY4pBw5vHAZXEFq36Ip5vQrdCKl1cBhn6Rsmg2ECA==", "ad"=>{"real_estate_type"=>"house", "adress"=>"London,UK", "second_adress"=>"Liverpool street 17", "square"=>"1234", "rooms"=>"9", "rent_limit_days"=>"31", "price_per_day"=>"100"}, "commit"=>"Create ad"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ads_controller.rb:31
+  [1m[36mAd Create (1.0ms)[0m  [1m[32mINSERT INTO "ads" ("real_estate_type", "square", "rooms", "adress", "rent_limit_days", "created_at", "updated_at", "user_id", "price_per_day", "second_adress") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["real_estate_type", 1], ["square", 1234.0], ["rooms", 9], ["adress", "London,UK"], ["rent_limit_days", 31], ["created_at", "2018-12-20 18:02:43.735963"], ["updated_at", "2018-12-20 18:02:43.735963"], ["user_id", 1], ["price_per_day", 100.0], ["second_adress", "Liverpool street 17"]]
+  ↳ app/controllers/ads_controller.rb:31
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ads_controller.rb:31
+Redirected to http://localhost:3000/ads/1
+Completed 302 Found in 93ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/ads/1" for 127.0.0.1 at 2018-12-20 20:02:43 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/ads/show.html.erb:8
+  Rendered ads/show.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 61ms (Views: 53.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/ads/1" for 127.0.0.1 at 2018-12-20 20:03:25 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/ads/show.html.erb:8
+  Rendered ads/show.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 78ms (Views: 71.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-20 20:03:38 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/home/index.html.erb:1
+  Rendered home/index.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:7
+  Rendered layouts/_header.html.erb (10.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 76ms (Views: 74.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ads/1" for 127.0.0.1 at 2018-12-20 20:03:40 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/ads/show.html.erb:8
+  Rendered ads/show.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 65ms (Views: 56.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ads/1/edit" for 127.0.0.1 at 2018-12-20 20:03:41 +0200
+Processing by AdsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/edit.html.erb within layouts/application
+  Rendered ads/edit.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 81ms (Views: 68.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/ads/1" for 127.0.0.1 at 2018-12-20 20:03:44 +0200
+Processing by AdsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HSw/4Wgiv/3zA5jBnWtB0/yxrubaYYmuDC/EmJnZ6ajFc2GQzUZI9xDmj7+jTUhQ0ykIBIXX0pbvcUPXrEA23A==", "ad"=>{"real_estate_type"=>"house", "square"=>"1234.0", "adress"=>"London,UK", "second_adress"=>"Liverpool street 17", "rooms"=>"9", "rent_limit_days"=>"31", "price_per_day"=>"100.0"}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ads_controller.rb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:48
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ads_controller.rb:48
+Redirected to http://localhost:3000/ads/1
+Completed 302 Found in 17ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/ads/1" for 127.0.0.1 at 2018-12-20 20:03:44 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/ads/show.html.erb:8
+  Rendered ads/show.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 61ms (Views: 55.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ads/1/edit" for 127.0.0.1 at 2018-12-20 20:03:53 +0200
+Processing by AdsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/edit.html.erb within layouts/application
+  Rendered ads/edit.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 57ms (Views: 47.6ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/ads/1" for 127.0.0.1 at 2018-12-20 20:03:58 +0200
+Processing by AdsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KEGHd3Nr2KffvoeQajaT6z/feRI+Aq07ZbcFkXtsW+bwHtkG1g8vrTxbkO5UEJpoEEff8GG09gOG6YLeTvWEkg==", "ad"=>{"real_estate_type"=>"house", "square"=>"1234.0", "adress"=>"London,UK", "second_adress"=>"Liverpool street 17", "rooms"=>"j", "rent_limit_days"=>"31", "price_per_day"=>"100.0"}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ads_controller.rb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:48
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ads_controller.rb:48
+  Rendering ads/edit.html.erb within layouts/application
+  Rendered ads/edit.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 72ms (Views: 60.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ads/1" for 127.0.0.1 at 2018-12-20 20:06:39 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/ads/show.html.erb:8
+  Rendered ads/show.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_header.html.erb (4.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 120ms (Views: 55.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/ads/1/edit" for 127.0.0.1 at 2018-12-20 20:06:43 +0200
+Processing by AdsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/edit.html.erb within layouts/application
+  Rendered ads/edit.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 63ms (Views: 58.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/ads/1" for 127.0.0.1 at 2018-12-20 20:06:51 +0200
+Processing by AdsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Db0xmPPCv1LowZ580f9HXpYnEm1vJgcPP7tmsjKLR+zV4m/pVqZIWAskiQLv2U7dub+0jzCQXDfc5eH9BxKYmA==", "ad"=>{"real_estate_type"=>"house", "square"=>"1234.0", "adress"=>"London,UK", "second_adress"=>"Liverpool street 17", "rooms"=>"a", "rent_limit_days"=>"31", "price_per_day"=>"100.0"}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ads_controller.rb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:48
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ads_controller.rb:48
+  Rendering ads/edit.html.erb within layouts/application
+  Rendered ads/edit.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 76ms (Views: 59.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/ads/1" for 127.0.0.1 at 2018-12-20 20:07:01 +0200
+Processing by AdsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1BQGsk2VSrFVfKwvTAI9ZWaGt4qDwC21eao1G56OoZl0JyLBMUEQatiQ6cRupyLRdiohXk2P4qnoNxhal33/Sg==", "ad"=>{"real_estate_type"=>"house", "square"=>"1234.0", "adress"=>"London,UK", "second_adress"=>"Liverpool street 17", "rooms"=>"12", "rent_limit_days"=>"31", "price_per_day"=>"100.0"}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ads_controller.rb:48
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:48
+  [1m[36mAd Update (2.9ms)[0m  [1m[33mUPDATE "ads" SET "rooms" = ?, "updated_at" = ? WHERE "ads"."id" = ?[0m  [["rooms", 12], ["updated_at", "2018-12-20 18:07:01.647886"], ["id", 1]]
+  ↳ app/controllers/ads_controller.rb:48
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ads_controller.rb:48
+Redirected to http://localhost:3000/ads/1
+Completed 302 Found in 27ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/ads/1" for 127.0.0.1 at 2018-12-20 20:07:01 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/ads/show.html.erb:8
+  Rendered ads/show.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (7.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 58ms (Views: 52.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ads/1" for 127.0.0.1 at 2018-12-20 20:07:49 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/ads/show.html.erb:8
+  Rendered ads/show.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 127ms (Views: 70.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/ads/1/edit" for 127.0.0.1 at 2018-12-20 20:07:55 +0200
+Processing by AdsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/edit.html.erb within layouts/application
+  Rendered ads/edit.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 61ms (Views: 53.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/ads/1" for 127.0.0.1 at 2018-12-20 20:07:59 +0200
+Processing by AdsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FyxLiX98u+OOEw5lRT47j0uWwtlW2c/roemrE04e7znPcxX42hhM6W32GRt7GDIMZA5kOwlvlNNCtyxce4cwTQ==", "ad"=>{"real_estate_type"=>"house", "square"=>"1234.0", "adress"=>"London,UK", "second_adress"=>"Liverpool street 17", "rooms"=>"11", "rent_limit_days"=>"31", "price_per_day"=>"100.0"}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ads_controller.rb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:48
+  [1m[36mAd Update (1.5ms)[0m  [1m[33mUPDATE "ads" SET "rooms" = ?, "updated_at" = ? WHERE "ads"."id" = ?[0m  [["rooms", 11], ["updated_at", "2018-12-20 18:07:59.192341"], ["id", 1]]
+  ↳ app/controllers/ads_controller.rb:48
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ads_controller.rb:48
+Redirected to http://localhost:3000/ads/1
+Completed 302 Found in 29ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/ads/1" for 127.0.0.1 at 2018-12-20 20:07:59 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/ads/show.html.erb:8
+  Rendered ads/show.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 46.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-20 20:08:05 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/home/index.html.erb:1
+  Rendered home/index.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:7
+  Rendered layouts/_header.html.erb (4.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 61ms (Views: 58.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ads/new" for 127.0.0.1 at 2018-12-20 20:08:33 +0200
+Processing by AdsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering ads/new.html.erb within layouts/application
+  Rendered ads/new.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 61ms (Views: 57.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-20 20:09:02 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/home/index.html.erb:1
+  Rendered home/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:7
+  Rendered layouts/_header.html.erb (4.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 58ms (Views: 56.4ms | ActiveRecord: 0.4ms)
+
+

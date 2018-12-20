@@ -5,9 +5,7 @@
     <p>
       <b><%=  ad.real_estate_type%></b> <br />
       <b> in <%= ad.adress %></b><br />
-      <b><%= ad.square %></b> square meters<br />
-      <b><%= ad.rooms %></b> rooms<br />
-      <b>for <%= ad.rent_limit_days %> </b> days <br />
+      <b> with <%= ad.rooms %></b> rooms<br />
       <%= link_to "Read more",ad_path(ad.id) %>
     </p>
 
