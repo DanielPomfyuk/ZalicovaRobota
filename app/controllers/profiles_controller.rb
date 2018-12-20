@@ -21,9 +21,9 @@ class ProfilesController < ApplicationController
   # PATCH/PUT /profiles/1
   # PATCH/PUT /profiles/1.json
   def update
-    puts "KOKOKO"
     puts profile_params.inspect
     puts "sss\n\n\n" + params.inspect
+    @profile.avatar = params[:user][:avatar]
     respond_to do |format|
       if @profile.update(profile_params)
         format.html { redirect_to profile_path(@profile.id)}
@@ -43,6 +43,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:user).permit(:id,:firstname, :lastname, :phone_number)
+      params.require(:user).permit(:id,:firstname, :lastname, :avatar, :phone_number)
     end
 end
